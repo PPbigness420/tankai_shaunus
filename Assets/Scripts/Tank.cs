@@ -6,7 +6,7 @@ public class Tank : MonoBehaviour
 {
     public float speed = 5;
     public float rotatespeed=90;
-    public float bulspeed;
+    
 
 
     public string vert = "Vertical";
@@ -15,6 +15,7 @@ public class Tank : MonoBehaviour
     public KeyCode shot;
 
     public GameObject bullet;
+    public Transform FirePoint;
 
     void Start()
     {
@@ -33,7 +34,7 @@ public class Tank : MonoBehaviour
 
         if (Input.GetKeyDown(shot))
         {
-            Instantiate(bullet,transform.position,transform.rotation);
+            Instantiate(bullet,FirePoint.position,FirePoint.rotation);
         }
     }
 }
