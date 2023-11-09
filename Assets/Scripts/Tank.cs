@@ -17,9 +17,13 @@ public class Tank : MonoBehaviour
     public GameObject bullet;
     public Transform FirePoint;
 
+    public AudioSource gunShot;
+
+    private Rigidbody rb;
+
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
     }
 
   
@@ -28,12 +32,14 @@ public class Tank : MonoBehaviour
         var hor = Input.GetAxis(horz);
         var ver = Input.GetAxis(vert);
 
-
+        
+        //rb.velocity = transform.forward * speed * ver * Time.deltaTime;
         transform.position += transform.forward * speed * ver * Time.deltaTime;
         transform.Rotate(0,rotatespeed * hor * Time.deltaTime,0);
 
         if (Input.GetKeyDown(shot))
         {
+            gunShot.Play();
             Instantiate(bullet,FirePoint.position,FirePoint.rotation);
         }
     }

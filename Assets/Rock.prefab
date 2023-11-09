@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 2074612149586063018}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.7, y: 1.09, z: 7.46}
+  m_LocalPosition: {x: -7.7, y: 0.62, z: 7.46}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -119,3 +119,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sRock: {fileID: 8195017787266078436, guid: 5719ce5a253d96e499f211a2d5625336, type: 3}
+  Health: 2
+  hitSFX: {fileID: 0}

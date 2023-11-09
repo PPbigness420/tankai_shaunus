@@ -16,4 +16,12 @@ public class Bullet : MonoBehaviour
         transform.position += transform.forward* speed * Time.deltaTime;
         
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (!collision.gameObject.name.Contains("hpcol"))
+        {
+            Destroy(gameObject);
+        }
+        
+    }
 }
